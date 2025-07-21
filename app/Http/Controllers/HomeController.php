@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Destination;
+use App\Models\Logo;
 use App\Models\Mainposter;
 use Illuminate\Http\Request;
 
@@ -12,7 +13,8 @@ class HomeController extends Controller
     {
         $mainposters = Mainposter::first();
         $destinations = Destination::get();
-        return view('front_end.home', compact('mainposters','destinations'));
+        $logo = Logo::first();
+        return view('front_end.home', compact('mainposters','destinations','logo'));
 
     }
 

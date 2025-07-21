@@ -80,6 +80,10 @@
                                 <a href="{{ route('destination') }}" class="nav-link" data-key=""> Destination
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a href="{{ route('logoview')}}" class="nav-link" data-key=""> Logo
+                                </a>
+                            </li>
                             {{-- <li class="nav-item">
                                 <a href="" class="nav-link" data-key=""> Brand </a>
                             </li> --}}

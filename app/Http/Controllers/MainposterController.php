@@ -47,19 +47,19 @@ if ($request->hasFile('fileMainposterImage')) {
     $fileName = $this->generateRandom(16) . '.' . $extension;
    
     ######### Live Configuration #####
-    // $absolutePath = '/home/faizgshb/public_html/upload/mainposter/' . $mainposter->id;
+    $absolutePath = '/home/faizgshb/public_html/upload/mainposter/' . $mainposter->id;
 
-    // $savedPath = $this->fileUpload($file, $absolutePath, $fileName);
+    $savedPath = $this->fileUpload($file, $absolutePath, $fileName);
 
-    // $mainposter->update([
-    //     'mainposter_image' => $savedPath
-    // ]);
+    $mainposter->update([
+        'mainposter_image' => $savedPath
+    ]);
 
     #######################
 
-    $mainposter->update([
-        'mainposter_image' => $this->fileUpload($file, 'upload/mainposter/' . $mainposter->id, $fileName)
-    ]);
+    // $mainposter->update([
+    //     'mainposter_image' => $this->fileUpload($file, 'upload/mainposter/' . $mainposter->id, $fileName)
+    // ]);
 }
 
 // Toastr notification

@@ -40,8 +40,15 @@
     <!-- ===============================================-->
     <main class="main" id="top">
     <nav class="navbar navbar-expand-lg navbar-light fixed-top py-5 d-block" data-navbar-on-scroll="data-navbar-on-scroll">
-        <div class="container"><a class="navbar-brand" href="#!"><img src="assets/frond_end/img/faizal_logo.jpeg" height="78" alt="logo" /></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"> </span></button>
+        <div class="container"><a class="navbar-brand" href="#!">
+          @if($logo)
+          <img src="{{$logo->header_logo}}" height="78" alt="logo" />
+          @else
+          <img src="assets/frond_end/img/faizal_logo.jpeg" height="78" alt="logo" />
+          @endif
+        </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"> </span></button>
           <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
           </div>
         </div>
@@ -122,7 +129,12 @@
 
         <div class="container">
           <div class="row">
-            <div class="col-lg-3 col-md-7 col-12 mb-4 mb-md-6 mb-lg-0 order-0"> <img class="mb-4" src="assets/frond_end/img/Faizal_logo2.jpg" width="150" alt="jadoo" />
+            <div class="col-lg-3 col-md-7 col-12 mb-4 mb-md-6 mb-lg-0 order-0"> 
+              @if($logo)
+              <img class="mb-4" src="{{ $logo->footer_logo }}" width="150" alt="jadoo" />
+              @else
+              <img class="mb-4" src="assets/frond_end/img/Faizal_logo2.jpg" width="150" alt="jadoo" />
+              @endif
               <p class="fs--1 text-secondary mb-0 fw-medium">Book your trip in minute, get full Control for much longer.</p>
             </div>
             <div class="col-lg-2 col-md-4 mb-4 mb-lg-0 order-lg-1 order-md-2">
