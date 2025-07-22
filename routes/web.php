@@ -16,6 +16,8 @@ Route::get('/getdestinationdata', [App\Http\Controllers\DestinationController::c
 Route::get('/getdestination/{id}', [App\Http\Controllers\DestinationController::class, 'getDestinationById'])->name('getdestinationbyid');
 Route::get('/destination/{id}', [App\Http\Controllers\DestinationController::class, 'deleteDestination'])->name('deletedestination');
 Route::get('/destinationvlog/view/{id}', [App\Http\Controllers\HomeController::class, 'destinationVlog'])->name('destinationvlogview');
+Route::get('/destinations/mainview', [App\Http\Controllers\HomeController::class, 'destinationMainView'])->name('destinationmainview');
+Route::get('/blogView', [App\Http\Controllers\HomeController::class, 'BlogView'])->name('destinationblogview');
 
 //Logo
 Route::get('/logoView', [App\Http\Controllers\LogoController::class, 'LogoView'])->name('logoview');

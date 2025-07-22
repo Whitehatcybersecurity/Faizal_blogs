@@ -25,4 +25,15 @@ class HomeController extends Controller
 
         return view('front_end.vlog',compact('destination'));
     }
+
+    public function destinationMainView(){
+
+       
+        return view('front_end.main_blogs');
+    }
+
+    public function BlogView(){
+
+        return view('front_end.blog');
+    }
 }

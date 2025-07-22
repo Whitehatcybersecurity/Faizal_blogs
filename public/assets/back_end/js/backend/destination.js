@@ -162,3 +162,22 @@ function refreshDatatable(tblId) {
         .DataTable()
         .ajax.reload();
 }
+
+
+document.getElementById("fileBlogImages").addEventListener("change", function () {
+    const previewContainer = document.getElementById("previewMultiImages");
+    previewContainer.innerHTML = ""; // Clear previous previews
+
+    Array.from(this.files).forEach(file => {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            const img = document.createElement("img");
+            img.src = e.target.result;
+            img.width = 100;
+            img.height = 100;
+            img.classList.add("me-2", "mb-2");
+            previewContainer.appendChild(img);
+        };
+        reader.readAsDataURL(file);
+    });
+});

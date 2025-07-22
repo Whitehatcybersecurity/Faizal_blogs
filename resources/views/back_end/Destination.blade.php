@@ -36,7 +36,7 @@
                                         <!--end col-->
                                         <div class="col-xxl-3 col-md-6">
                                             <div>
-                                                <label for="basiInput" class="form-label">Destination Vlog</label>
+                                                <label for="basiInput" class="form-label">Destination Blog</label>
                                                 <textarea class="form-control" name="txtDestinationVlog"
                                                     placeholder="Destination vlog" id="txtDestinationVlog" rows="4" required></textarea>        
                                             </div>
@@ -53,6 +53,30 @@
                                                 <img src="{{ asset('assets/back_end/images/no-image.jpg') }}" id="previewImage" width="100"
                                                     height="100">
                                             </div>
+                                        </div>
+                                        <!--end col-->
+                                        <div class="col-xxl-3 col-md-6">
+                                            <div>
+                                                <label for="labelInput" class="form-label">Blogs Main Posters</label>
+                                                <input type="file" class="form-control" name="fileDestinationImage"
+                                                    id="fileDestinationImage">
+                                            </div>
+                                            <div class="img mt-2">
+                                                <img src="{{ asset('assets/back_end/images/no-image.jpg') }}" id="previewImage" width="100"
+                                                    height="100">
+                                            </div>
+                                        </div>
+                                        <!--end col-->
+                                        <div class="col-xxl-3 col-md-6">
+                                            <div>
+                                                <label for="labelInput" class="form-label">Blog Images</label>
+                                                <input type="file" class="form-control" name="fileBlogImages[]" id="fileBlogImages" multiple>
+
+                                            </div>
+                                            <div class="img mt-2" id="previewMultiImages">
+                                                <img src="{{ asset('assets/back_end/images/no-image.jpg') }}" id="previewMultiImages" width="100"
+                                                    height="100">
+                                            </div>                                                                                                  
                                         </div>
                                         <!--end col-->
                                         <div class="col-xxl-3 col-md-6">
